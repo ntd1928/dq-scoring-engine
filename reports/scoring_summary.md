@@ -1,5 +1,5 @@
 # DQ Scoring Report
-**Generated:** 2026-05-14 08:38 UTC
+**Generated:** 2026-05-14 08:42 UTC
 **Datasets scored:** 16
 
 ## csvw_dialect
@@ -358,7 +358,7 @@
 | G01 | general | CMP | 100.00% | ERROR: No DataFrame available |
 | G04 | general | CMP | 100.00% | ERROR: No DataFrame available |
 | XML04 | specific | CMP | 56.19% | {"unique_attrs": 22, "rows": 80} |
-| XML06 | specific | CMP | 56.19% | {"missing_attrs": {"LastEditorUserId": 43, "OwnerDisplayName": 73, "ClosedDate": |
+| XML06 | specific | CMP | 56.19% | {"missing_attrs": {"OwnerDisplayName": 73, "OwnerUserId": 7, "LastEditDate": 41, |
 | G03 | general | CST | 100.00% | ERROR: No DataFrame available |
 | G07 | general | ACC | 100.00% | ERROR: No DataFrame available |
 | G08 | general | ACC | 100.00% | ERROR: No DataFrame available |
