@@ -1,0 +1,177 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "description": "3-Layer Scoring Framework: International Standards → Criteria → Static Rules",
+    "iso_references": ["ISO 8000", "ISO/IEC 25012", "ISO 8601"],
+    "created": "2026-05-14",
+    "project": "Multi-Agent Data Quality Analysis Platform"
+  },
+
+  "criteria_definitions": {
+    "SYN": { "name": "Syntax Validity",          "iso_ref": "ISO 8000-8 Syntactic Quality" },
+    "STR": { "name": "Structural Conformance",    "iso_ref": "ISO/IEC 25012 Consistency" },
+    "CMP": { "name": "Completeness",              "iso_ref": "ISO/IEC 25012 Completeness" },
+    "CST": { "name": "Consistency",                "iso_ref": "ISO/IEC 25012 Consistency" },
+    "ACC": { "name": "Accuracy / Range",           "iso_ref": "ISO/IEC 25012 Accuracy" },
+    "SEC": { "name": "Security / Integrity",       "iso_ref": "ISO 8000 Provenance" }
+  },
+
+  "standards": {
+    "csv": {
+      "standard_name": "W3C CSVW + ISO/IEC 25012",
+      "standard_url": "https://www.w3.org/TR/tabular-data-primer/",
+      "weights": { "SYN": 0.25, "STR": 0.25, "CMP": 0.20, "CST": 0.15, "ACC": 0.10, "SEC": 0.05 },
+      "rules": {
+        "SYN": ["G05", "G06", "G12", "CSV01", "CSV03", "CSV04", "CSV07"],
+        "STR": ["G02", "G10", "CSV02", "CSV05", "CSV06"],
+        "CMP": ["G01", "G04"],
+        "CST": ["G03", "G09"],
+        "ACC": ["G07", "G08", "G13"],
+        "SEC": ["G14", "G15"]
+      }
+    },
+    "json": {
+      "standard_name": "JSON Schema Draft 2020-12 + RFC 8259",
+      "standard_url": "https://json-schema.org/specification",
+      "weights": { "SYN": 0.30, "STR": 0.25, "CMP": 0.15, "CST": 0.15, "ACC": 0.10, "SEC": 0.05 },
+      "rules": {
+        "SYN": ["G05", "G06", "JSON01", "JSON02", "JSON08"],
+        "STR": ["G02", "JSON03", "JSON07"],
+        "CMP": ["G01", "G04", "JSON06"],
+        "CST": ["G03", "JSON04", "JSON05", "JSON09"],
+        "ACC": ["G07", "G08", "G11"],
+        "SEC": ["G14", "G15"]
+      }
+    },
+    "xml": {
+      "standard_name": "W3C XML Schema (XSD 1.1)",
+      "standard_url": "https://www.w3.org/TR/xmlschema11-1/",
+      "weights": { "SYN": 0.25, "STR": 0.30, "CMP": 0.15, "CST": 0.15, "ACC": 0.10, "SEC": 0.05 },
+      "rules": {
+        "SYN": ["G05", "XML01", "XML05"],
+        "STR": ["G02", "XML02", "XML03"],
+        "CMP": ["G01", "G04", "XML04", "XML06"],
+        "CST": ["G03"],
+        "ACC": ["G07", "G08"],
+        "SEC": ["G14", "G15"]
+      }
+    },
+    "parquet": {
+      "standard_name": "Apache Parquet Format Spec + ISO/IEC 25012",
+      "standard_url": "https://parquet.apache.org/documentation/latest/",
+      "weights": { "SYN": 0.10, "STR": 0.30, "CMP": 0.25, "CST": 0.15, "ACC": 0.15, "SEC": 0.05 },
+      "rules": {
+        "SYN": ["PQ01"],
+        "STR": ["G02", "PQ02", "PQ05"],
+        "CMP": ["G01", "G04", "PQ04"],
+        "CST": ["G03", "PQ03"],
+        "ACC": ["G07", "G08", "PQ06", "PQ07"],
+        "SEC": ["G14", "G15", "PQ08"]
+      }
+    },
+    "avro": {
+      "standard_name": "Apache Avro Specification 1.12",
+      "standard_url": "https://avro.apache.org/docs/current/specification/",
+      "weights": { "SYN": 0.10, "STR": 0.35, "CMP": 0.20, "CST": 0.20, "ACC": 0.10, "SEC": 0.05 },
+      "rules": {
+        "SYN": ["AVRO01"],
+        "STR": ["G02", "AVRO02", "AVRO03", "AVRO04"],
+        "CMP": ["G01", "G04"],
+        "CST": ["G03"],
+        "ACC": ["G07", "G08"],
+        "SEC": ["G14", "G15"]
+      }
+    },
+    "orc": {
+      "standard_name": "Apache ORC Specification",
+      "standard_url": "https://orc.apache.org/specification/",
+      "weights": { "SYN": 0.10, "STR": 0.35, "CMP": 0.20, "CST": 0.15, "ACC": 0.15, "SEC": 0.05 },
+      "rules": {
+        "SYN": ["ORC01"],
+        "STR": ["G02"],
+        "CMP": ["G01", "G04"],
+        "CST": ["G03"],
+        "ACC": ["G07", "ORC02", "ORC03"],
+        "SEC": ["G14", "G15", "ORC04"]
+      }
+    },
+    "xlsx": {
+      "standard_name": "ISO/IEC 29500 (OOXML) + ISO/IEC 25012",
+      "standard_url": "https://standards.iso.org/ittf/PubliclyAvailableStandards/c071691_ISO_IEC_29500-1_2016.zip",
+      "weights": { "SYN": 0.15, "STR": 0.25, "CMP": 0.25, "CST": 0.15, "ACC": 0.15, "SEC": 0.05 },
+      "rules": {
+        "SYN": ["G05"],
+        "STR": ["G02", "XLS01", "XLS02", "XLS04"],
+        "CMP": ["G01", "G04", "XLS03"],
+        "CST": ["G03", "G09"],
+        "ACC": ["G07", "G08", "XLS05"],
+        "SEC": ["G14", "G15"]
+      }
+    },
+    "fixed_width": {
+      "standard_name": "Domain Spec (NOAA GHCN) + ISO/IEC 25012",
+      "standard_url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/readme.txt",
+      "weights": { "SYN": 0.30, "STR": 0.25, "CMP": 0.20, "CST": 0.10, "ACC": 0.10, "SEC": 0.05 },
+      "rules": {
+        "SYN": ["G05", "FW01"],
+        "STR": ["G10", "FW02"],
+        "CMP": ["G01", "G04", "FW03"],
+        "CST": ["G03"],
+        "ACC": ["G08", "FW04"],
+        "SEC": ["G14", "G15"]
+      }
+    },
+    "txt_log": {
+      "standard_name": "Syslog RFC 5424 + ISO/IEC 25012",
+      "standard_url": "https://datatracker.ietf.org/doc/html/rfc5424",
+      "weights": { "SYN": 0.30, "STR": 0.20, "CMP": 0.15, "CST": 0.15, "ACC": 0.15, "SEC": 0.05 },
+      "rules": {
+        "SYN": ["G05", "LOG01", "LOG03"],
+        "STR": ["LOG02", "LOG04"],
+        "CMP": ["G01", "G04"],
+        "CST": ["G03"],
+        "ACC": ["G07", "G08"],
+        "SEC": ["G14", "G15"]
+      }
+    },
+    "geojson": {
+      "standard_name": "RFC 7946 (GeoJSON)",
+      "standard_url": "https://datatracker.ietf.org/doc/html/rfc7946",
+      "weights": { "SYN": 0.20, "STR": 0.25, "CMP": 0.20, "CST": 0.15, "ACC": 0.15, "SEC": 0.05 },
+      "rules": {
+        "SYN": ["G05", "JSON01"],
+        "STR": ["G02", "GEO01"],
+        "CMP": ["G01", "GEO02"],
+        "CST": ["G03"],
+        "ACC": ["GEO03", "GEO04"],
+        "SEC": ["G14", "G15"]
+      }
+    },
+    "osm": {
+      "standard_name": "OSM XML/PBF Specification",
+      "standard_url": "https://wiki.openstreetmap.org/wiki/OSM_XML",
+      "weights": { "SYN": 0.15, "STR": 0.25, "CMP": 0.25, "CST": 0.15, "ACC": 0.15, "SEC": 0.05 },
+      "rules": {
+        "SYN": ["G05", "JSON01"],
+        "STR": ["G02", "OSM01"],
+        "CMP": ["G01", "OSM02", "OSM03"],
+        "CST": ["G03"],
+        "ACC": ["GEO03"],
+        "SEC": ["G14", "G15"]
+      }
+    },
+    "archives": {
+      "standard_name": "ZIP/GZIP Spec + ISO 8000 Provenance",
+      "standard_url": "https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT",
+      "weights": { "SYN": 0.10, "STR": 0.10, "CMP": 0.10, "CST": 0.05, "ACC": 0.05, "SEC": 0.60 },
+      "rules": {
+        "SYN": ["ARC01"],
+        "STR": [],
+        "CMP": ["G04"],
+        "CST": [],
+        "ACC": [],
+        "SEC": ["G14", "G15", "ARC02", "ARC03", "ARC04"]
+      }
+    }
+  }
+}

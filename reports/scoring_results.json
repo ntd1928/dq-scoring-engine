@@ -1,0 +1,4024 @@
+{
+  "generated": "2026-05-14T08:38:48.035537+00:00",
+  "datasets": [
+    {
+      "dataset_id": "csvw_dialect",
+      "data_type": "csv",
+      "standard": "W3C CSVW + ISO/IEC 25012",
+      "final_score": 100.0,
+      "criteria": {
+        "SYN": {
+          "name": "Syntax Validity",
+          "weight": 0.25,
+          "score": 100.0,
+          "weighted_score": 25.0,
+          "rules_count": 7
+        },
+        "STR": {
+          "name": "Structural Conformance",
+          "weight": 0.25,
+          "score": 100.0,
+          "weighted_score": 25.0,
+          "rules_count": 5
+        },
+        "CMP": {
+          "name": "Completeness",
+          "weight": 0.2,
+          "score": 100.0,
+          "weighted_score": 20.0,
+          "rules_count": 2
+        },
+        "CST": {
+          "name": "Consistency",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 2
+        },
+        "ACC": {
+          "name": "Accuracy / Range",
+          "weight": 0.1,
+          "score": 100.0,
+          "weighted_score": 10.0,
+          "rules_count": 3
+        },
+        "SEC": {
+          "name": "Security / Integrity",
+          "weight": 0.05,
+          "score": 100.0,
+          "weighted_score": 5.0,
+          "rules_count": 2
+        }
+      },
+      "rules_detail": [
+        {
+          "rule_id": "G05",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "encoding": "utf-8"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G06",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "has_bom": false
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G12",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 4,
+          "passed_records": 4,
+          "pass_rate": 1.0,
+          "details": {
+            "whitespace_violations": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV01",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "detected_delimiter": "','"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV03",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 2,
+          "passed_records": 2,
+          "pass_rate": 1.0,
+          "details": {
+            "physical_lines": 2,
+            "logical_records": 2,
+            "has_quoted_newline": false
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV04",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 2,
+          "passed_records": 2,
+          "pass_rate": 1.0,
+          "details": {
+            "expected_columns": 5,
+            "mismatched_rows": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV07",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "non_ascii_bytes": 0,
+            "utf8_decodable": true
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G02",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 5,
+          "passed_records": 5,
+          "pass_rate": 1.0,
+          "details": {
+            "typed_columns": 5,
+            "object_columns": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G10",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 2,
+          "passed_records": 2,
+          "pass_rate": 1.0,
+          "details": {
+            "delimiter": "'\\t'",
+            "mode_field_count": 1,
+            "distribution": {
+              "1": 2
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV02",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "has_header": false
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV05",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 2,
+          "passed_records": 2,
+          "pass_rate": 1.0,
+          "details": {
+            "comment_count": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV06",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 2,
+          "passed_records": 2,
+          "pass_rate": 1.0,
+          "details": {
+            "mode_field_count": 5,
+            "distribution": {
+              "5": 2
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G01",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 5,
+          "passed_records": 5,
+          "pass_rate": 1.0,
+          "details": {
+            "null_count": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G04",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "row_count": 1
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G03",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "duplicate_rows": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G09",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "no date pairs found"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G07",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "no timestamp columns detected"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G08",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "G13",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "enum config not provided; skipped"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G14",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sha256": "6045e523b338c8934b7e9c918c3de59925f9ff90a26fb17a86c9388da41bbaad",
+            "size_bytes": 137
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G15",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "size_bytes": 137,
+            "size_mb": 0.0
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "dataset_id": "csv_spectrum_edges",
+      "data_type": "csv",
+      "standard": "W3C CSVW + ISO/IEC 25012",
+      "final_score": 100.0,
+      "criteria": {
+        "SYN": {
+          "name": "Syntax Validity",
+          "weight": 0.25,
+          "score": 100.0,
+          "weighted_score": 25.0,
+          "rules_count": 7
+        },
+        "STR": {
+          "name": "Structural Conformance",
+          "weight": 0.25,
+          "score": 100.0,
+          "weighted_score": 25.0,
+          "rules_count": 5
+        },
+        "CMP": {
+          "name": "Completeness",
+          "weight": 0.2,
+          "score": 100.0,
+          "weighted_score": 20.0,
+          "rules_count": 2
+        },
+        "CST": {
+          "name": "Consistency",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 2
+        },
+        "ACC": {
+          "name": "Accuracy / Range",
+          "weight": 0.1,
+          "score": 100.0,
+          "weighted_score": 10.0,
+          "rules_count": 3
+        },
+        "SEC": {
+          "name": "Security / Integrity",
+          "weight": 0.05,
+          "score": 100.0,
+          "weighted_score": 5.0,
+          "rules_count": 2
+        }
+      },
+      "rules_detail": [
+        {
+          "rule_id": "G05",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "encoding": "utf-8"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G06",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "has_bom": false
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G12",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 4,
+          "passed_records": 4,
+          "pass_rate": 1.0,
+          "details": {
+            "whitespace_violations": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV01",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "detected_delimiter": "','"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV03",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 2,
+          "passed_records": 2,
+          "pass_rate": 1.0,
+          "details": {
+            "physical_lines": 2,
+            "logical_records": 2,
+            "has_quoted_newline": false
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV04",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 2,
+          "passed_records": 2,
+          "pass_rate": 1.0,
+          "details": {
+            "expected_columns": 5,
+            "mismatched_rows": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV07",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "non_ascii_bytes": 0,
+            "utf8_decodable": true
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G02",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 5,
+          "passed_records": 5,
+          "pass_rate": 1.0,
+          "details": {
+            "typed_columns": 5,
+            "object_columns": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G10",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 2,
+          "passed_records": 2,
+          "pass_rate": 1.0,
+          "details": {
+            "delimiter": "'\\t'",
+            "mode_field_count": 1,
+            "distribution": {
+              "1": 2
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV02",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "has_header": true
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV05",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 2,
+          "passed_records": 2,
+          "pass_rate": 1.0,
+          "details": {
+            "comment_count": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV06",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 2,
+          "passed_records": 2,
+          "pass_rate": 1.0,
+          "details": {
+            "mode_field_count": 5,
+            "distribution": {
+              "5": 2
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G01",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 5,
+          "passed_records": 5,
+          "pass_rate": 1.0,
+          "details": {
+            "null_count": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G04",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "row_count": 1
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G03",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "duplicate_rows": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G09",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "no date pairs found"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G07",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "no timestamp columns detected"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G08",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "G13",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "enum config not provided; skipped"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G14",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sha256": "f7654bf8e69586c8fe7f7f89392d2ed551be0e468e7101187bb482357d9a7815",
+            "size_bytes": 68
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G15",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "size_bytes": 68,
+            "size_mb": 0.0
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "dataset_id": "gdelt_events",
+      "data_type": "csv",
+      "standard": "W3C CSVW + ISO/IEC 25012",
+      "final_score": 93.76,
+      "criteria": {
+        "SYN": {
+          "name": "Syntax Validity",
+          "weight": 0.25,
+          "score": 88.66,
+          "weighted_score": 22.16,
+          "rules_count": 7
+        },
+        "STR": {
+          "name": "Structural Conformance",
+          "weight": 0.25,
+          "score": 86.38,
+          "weighted_score": 21.59,
+          "rules_count": 5
+        },
+        "CMP": {
+          "name": "Completeness",
+          "weight": 0.2,
+          "score": 100.0,
+          "weighted_score": 20.0,
+          "rules_count": 2
+        },
+        "CST": {
+          "name": "Consistency",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 2
+        },
+        "ACC": {
+          "name": "Accuracy / Range",
+          "weight": 0.1,
+          "score": 100.0,
+          "weighted_score": 10.0,
+          "rules_count": 3
+        },
+        "SEC": {
+          "name": "Security / Integrity",
+          "weight": 0.05,
+          "score": 100.0,
+          "weighted_score": 5.0,
+          "rules_count": 2
+        }
+      },
+      "rules_detail": [
+        {
+          "rule_id": "G05",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "encoding": "utf-8"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G06",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "has_bom": false
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G12",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "CSV01",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "detected_delimiter": "'\\t'"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV03",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1000,
+          "passed_records": 1000,
+          "pass_rate": 1.0,
+          "details": {
+            "physical_lines": 1000,
+            "logical_records": 1000,
+            "has_quoted_newline": false
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV04",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1000,
+          "passed_records": 206,
+          "pass_rate": 0.206,
+          "details": {
+            "expected_columns": 1,
+            "mismatched_rows": 794
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV07",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "non_ascii_bytes": 106,
+            "utf8_decodable": true
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G02",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G10",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 1000,
+          "passed_records": 1000,
+          "pass_rate": 1.0,
+          "details": {
+            "delimiter": "'\\t'",
+            "mode_field_count": 58,
+            "distribution": {
+              "58": 1000
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV02",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "has_header": false
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV05",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1000,
+          "passed_records": 1000,
+          "pass_rate": 1.0,
+          "details": {
+            "comment_count": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "CSV06",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1000,
+          "passed_records": 319,
+          "pass_rate": 0.319,
+          "details": {
+            "mode_field_count": 5,
+            "distribution": {
+              "1": 206,
+              "5": 319,
+              "3": 162,
+              "7": 226,
+              "4": 71,
+              "6": 12,
+              "2": 2,
+              "10": 2
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G01",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G04",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G03",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G09",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G07",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G08",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G13",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "enum config not provided; skipped"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G14",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sha256": "18f8eb5e1375f306f95475fb8d56985e348ffbfcef70cb58da92f6a09625fec7",
+            "size_bytes": 376305
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G15",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "size_bytes": 376305,
+            "size_mb": 0.36
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "dataset_id": "openfda_drug_event",
+      "data_type": "json",
+      "standard": "JSON Schema Draft 2020-12 + RFC 8259",
+      "final_score": 93.36,
+      "criteria": {
+        "SYN": {
+          "name": "Syntax Validity",
+          "weight": 0.3,
+          "score": 80.39,
+          "weighted_score": 24.12,
+          "rules_count": 5
+        },
+        "STR": {
+          "name": "Structural Conformance",
+          "weight": 0.25,
+          "score": 100.0,
+          "weighted_score": 25.0,
+          "rules_count": 3
+        },
+        "CMP": {
+          "name": "Completeness",
+          "weight": 0.15,
+          "score": 94.93,
+          "weighted_score": 14.24,
+          "rules_count": 3
+        },
+        "CST": {
+          "name": "Consistency",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 4
+        },
+        "ACC": {
+          "name": "Accuracy / Range",
+          "weight": 0.1,
+          "score": 100.0,
+          "weighted_score": 10.0,
+          "rules_count": 3
+        },
+        "SEC": {
+          "name": "Security / Integrity",
+          "weight": 0.05,
+          "score": 100.0,
+          "weighted_score": 5.0,
+          "rules_count": 2
+        }
+      },
+      "rules_detail": [
+        {
+          "rule_id": "G05",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "encoding": "utf-8"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G06",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "has_bom": false
+          },
+          "error": null
+        },
+        {
+          "rule_id": "JSON01",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "JSON02",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "trailing_comma_count": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "JSON08",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 16634,
+          "passed_records": 327,
+          "pass_rate": 0.019659,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "G02",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "JSON03",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "max_depth": 8,
+            "threshold": 20
+          },
+          "error": null
+        },
+        {
+          "rule_id": "JSON07",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "informational rule"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G01",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G04",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "JSON06",
+          "rule_tag": "specific",
+          "criteria": "CMP",
+          "total_records": 230,
+          "passed_records": 195,
+          "pass_rate": 0.847826,
+          "details": {
+            "total_keys": 23,
+            "records": 10
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G03",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "JSON04",
+          "rule_tag": "specific",
+          "criteria": "CST",
+          "total_records": 10,
+          "passed_records": 10,
+          "pass_rate": 1.0,
+          "details": {
+            "unique_keysets": 4
+          },
+          "error": null
+        },
+        {
+          "rule_id": "JSON05",
+          "rule_tag": "specific",
+          "criteria": "CST",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "fewer than 2 arrays"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "JSON09",
+          "rule_tag": "specific",
+          "criteria": "CST",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {
+            "event_types": {}
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G07",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G08",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G11",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G14",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sha256": "66880f746f993c50cb6aa40b668b959e9c4ac4aa3fa8f7ac5d732beba8b534a8",
+            "size_bytes": 612444
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G15",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "size_bytes": 612444,
+            "size_mb": 0.58
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "dataset_id": "sec_edgar",
+      "data_type": "json",
+      "standard": "JSON Schema Draft 2020-12 + RFC 8259",
+      "final_score": 96.25,
+      "criteria": {
+        "SYN": {
+          "name": "Syntax Validity",
+          "weight": 0.3,
+          "score": 100.0,
+          "weighted_score": 30.0,
+          "rules_count": 5
+        },
+        "STR": {
+          "name": "Structural Conformance",
+          "weight": 0.25,
+          "score": 100.0,
+          "weighted_score": 25.0,
+          "rules_count": 3
+        },
+        "CMP": {
+          "name": "Completeness",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 3
+        },
+        "CST": {
+          "name": "Consistency",
+          "weight": 0.15,
+          "score": 75.0,
+          "weighted_score": 11.25,
+          "rules_count": 4
+        },
+        "ACC": {
+          "name": "Accuracy / Range",
+          "weight": 0.1,
+          "score": 100.0,
+          "weighted_score": 10.0,
+          "rules_count": 3
+        },
+        "SEC": {
+          "name": "Security / Integrity",
+          "weight": 0.05,
+          "score": 100.0,
+          "weighted_score": 5.0,
+          "rules_count": 2
+        }
+      },
+      "rules_detail": [
+        {
+          "rule_id": "G05",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "encoding": "utf-8"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G06",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "has_bom": false
+          },
+          "error": null
+        },
+        {
+          "rule_id": "JSON01",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "JSON02",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "trailing_comma_count": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "JSON08",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "G02",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "JSON03",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "max_depth": 4,
+            "threshold": 20
+          },
+          "error": null
+        },
+        {
+          "rule_id": "JSON07",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "informational rule"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G01",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G04",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "JSON06",
+          "rule_tag": "specific",
+          "criteria": "CMP",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "G03",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "JSON04",
+          "rule_tag": "specific",
+          "criteria": "CST",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "not a record list"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "JSON05",
+          "rule_tag": "specific",
+          "criteria": "CST",
+          "total_records": 3,
+          "passed_records": 0,
+          "pass_rate": 0.0,
+          "details": {
+            "array_lengths": {
+              "tickers": 1,
+              "exchanges": 1,
+              "formerNames": 3
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "JSON09",
+          "rule_tag": "specific",
+          "criteria": "CST",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "event_types": {
+              "<missing>": 1
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G07",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G08",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G11",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G14",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sha256": "3f737dc9c53367e65f6131057e597f8d389fac6127acf012c1b5b15331b0cfbe",
+            "size_bytes": 164555
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G15",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "size_bytes": 164555,
+            "size_mb": 0.16
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "dataset_id": "gharchive",
+      "data_type": "json",
+      "standard": "JSON Schema Draft 2020-12 + RFC 8259",
+      "final_score": 73.17,
+      "criteria": {
+        "SYN": {
+          "name": "Syntax Validity",
+          "weight": 0.3,
+          "score": 80.0,
+          "weighted_score": 24.0,
+          "rules_count": 5
+        },
+        "STR": {
+          "name": "Structural Conformance",
+          "weight": 0.25,
+          "score": 66.67,
+          "weighted_score": 16.67,
+          "rules_count": 3
+        },
+        "CMP": {
+          "name": "Completeness",
+          "weight": 0.15,
+          "score": 66.67,
+          "weighted_score": 10.0,
+          "rules_count": 3
+        },
+        "CST": {
+          "name": "Consistency",
+          "weight": 0.15,
+          "score": 50.0,
+          "weighted_score": 7.5,
+          "rules_count": 4
+        },
+        "ACC": {
+          "name": "Accuracy / Range",
+          "weight": 0.1,
+          "score": 100.0,
+          "weighted_score": 10.0,
+          "rules_count": 3
+        },
+        "SEC": {
+          "name": "Security / Integrity",
+          "weight": 0.05,
+          "score": 100.0,
+          "weighted_score": 5.0,
+          "rules_count": 2
+        }
+      },
+      "rules_detail": [
+        {
+          "rule_id": "G05",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "encoding": "utf-8"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G06",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "has_bom": false
+          },
+          "error": null
+        },
+        {
+          "rule_id": "JSON01",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 0,
+          "pass_rate": 0.0,
+          "details": {
+            "error": "Extra data: line 2 column 1 (char 616)"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "JSON02",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "trailing_comma_count": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "JSON08",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1000,
+          "passed_records": 1000,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "G02",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "JSON03",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 0,
+          "pass_rate": 0.0,
+          "details": {
+            "error": "parse failed"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "JSON07",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "informational rule"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G01",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G04",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "JSON06",
+          "rule_tag": "specific",
+          "criteria": "CMP",
+          "total_records": 1,
+          "passed_records": 0,
+          "pass_rate": 0.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "G03",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "JSON04",
+          "rule_tag": "specific",
+          "criteria": "CST",
+          "total_records": 1,
+          "passed_records": 0,
+          "pass_rate": 0.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "JSON05",
+          "rule_tag": "specific",
+          "criteria": "CST",
+          "total_records": 1,
+          "passed_records": 0,
+          "pass_rate": 0.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "JSON09",
+          "rule_tag": "specific",
+          "criteria": "CST",
+          "total_records": 1000,
+          "passed_records": 1000,
+          "pass_rate": 1.0,
+          "details": {
+            "event_types": {
+              "PushEvent": 851,
+              "CreateEvent": 52,
+              "DeleteEvent": 20,
+              "PullRequestReviewCommentEvent": 8,
+              "PullRequestReviewEvent": 7,
+              "WatchEvent": 11,
+              "IssuesEvent": 16,
+              "IssueCommentEvent": 6,
+              "PullRequestEvent": 22,
+              "ReleaseEvent": 3,
+              "ForkEvent": 4
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G07",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G08",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G11",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G14",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sha256": "f91ce371e7c90f8a65a670b5bc6b39174372b4e77fa92bd330448bb2b37f069a",
+            "size_bytes": 903995
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G15",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "size_bytes": 903995,
+            "size_mb": 0.86
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "dataset_id": "usgs_geojson",
+      "data_type": "geojson",
+      "standard": "RFC 7946 (GeoJSON)",
+      "final_score": 100.0,
+      "criteria": {
+        "SYN": {
+          "name": "Syntax Validity",
+          "weight": 0.2,
+          "score": 100.0,
+          "weighted_score": 20.0,
+          "rules_count": 2
+        },
+        "STR": {
+          "name": "Structural Conformance",
+          "weight": 0.25,
+          "score": 100.0,
+          "weighted_score": 25.0,
+          "rules_count": 2
+        },
+        "CMP": {
+          "name": "Completeness",
+          "weight": 0.2,
+          "score": 100.0,
+          "weighted_score": 20.0,
+          "rules_count": 2
+        },
+        "CST": {
+          "name": "Consistency",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 1
+        },
+        "ACC": {
+          "name": "Accuracy / Range",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 2
+        },
+        "SEC": {
+          "name": "Security / Integrity",
+          "weight": 0.05,
+          "score": 100.0,
+          "weighted_score": 5.0,
+          "rules_count": 2
+        }
+      },
+      "rules_detail": [
+        {
+          "rule_id": "G05",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "encoding": "utf-8"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "JSON01",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "G02",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "GEO01",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "type": "FeatureCollection"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G01",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "GEO02",
+          "rule_tag": "specific",
+          "criteria": "CMP",
+          "total_records": 557,
+          "passed_records": 557,
+          "pass_rate": 1.0,
+          "details": {
+            "missing_geometry": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G03",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "GEO03",
+          "rule_tag": "specific",
+          "criteria": "ACC",
+          "total_records": 557,
+          "passed_records": 557,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "GEO04",
+          "rule_tag": "specific",
+          "criteria": "ACC",
+          "total_records": 557,
+          "passed_records": 557,
+          "pass_rate": 1.0,
+          "details": {
+            "geometry_types": {
+              "Point": 557
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G14",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sha256": "d8d9c17abf4881591d7a8fc42903500cf97dbbac9cd96d7aa4330a863b8086c8",
+            "size_bytes": 404409
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G15",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "size_bytes": 404409,
+            "size_mb": 0.39
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "dataset_id": "osm_overpass",
+      "data_type": "osm",
+      "standard": "OSM XML/PBF Specification",
+      "final_score": 92.07,
+      "criteria": {
+        "SYN": {
+          "name": "Syntax Validity",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 2
+        },
+        "STR": {
+          "name": "Structural Conformance",
+          "weight": 0.25,
+          "score": 100.0,
+          "weighted_score": 25.0,
+          "rules_count": 2
+        },
+        "CMP": {
+          "name": "Completeness",
+          "weight": 0.25,
+          "score": 68.26,
+          "weighted_score": 17.07,
+          "rules_count": 3
+        },
+        "CST": {
+          "name": "Consistency",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 1
+        },
+        "ACC": {
+          "name": "Accuracy / Range",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 1
+        },
+        "SEC": {
+          "name": "Security / Integrity",
+          "weight": 0.05,
+          "score": 100.0,
+          "weighted_score": 5.0,
+          "rules_count": 2
+        }
+      },
+      "rules_detail": [
+        {
+          "rule_id": "G05",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "encoding": "utf-8"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "JSON01",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "G02",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "OSM01",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 40161,
+          "passed_records": 40161,
+          "pass_rate": 1.0,
+          "details": {
+            "types": {
+              "node": 35104,
+              "way": 4963,
+              "relation": 94
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G01",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "OSM02",
+          "rule_tag": "specific",
+          "criteria": "CMP",
+          "total_records": 35104,
+          "passed_records": 35104,
+          "pass_rate": 1.0,
+          "details": {
+            "missing_latlon": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "OSM03",
+          "rule_tag": "specific",
+          "criteria": "CMP",
+          "total_records": 40161,
+          "passed_records": 1923,
+          "pass_rate": 0.047882,
+          "details": {
+            "tagged": 1923,
+            "untagged": 38238
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G03",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "GEO03",
+          "rule_tag": "specific",
+          "criteria": "ACC",
+          "total_records": 35104,
+          "passed_records": 35104,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "G14",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sha256": "5f34e92a19692dd6659fb4fc22a66da8b07013efcffa727d7e89afd2b84a933f",
+            "size_bytes": 6894107
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G15",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "size_bytes": 6894107,
+            "size_mb": 6.57
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "dataset_id": "stackexchange_xml",
+      "data_type": "xml",
+      "standard": "W3C XML Schema (XSD 1.1)",
+      "final_score": 96.71,
+      "criteria": {
+        "SYN": {
+          "name": "Syntax Validity",
+          "weight": 0.25,
+          "score": 100.0,
+          "weighted_score": 25.0,
+          "rules_count": 3
+        },
+        "STR": {
+          "name": "Structural Conformance",
+          "weight": 0.3,
+          "score": 100.0,
+          "weighted_score": 30.0,
+          "rules_count": 3
+        },
+        "CMP": {
+          "name": "Completeness",
+          "weight": 0.15,
+          "score": 78.1,
+          "weighted_score": 11.71,
+          "rules_count": 4
+        },
+        "CST": {
+          "name": "Consistency",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 1
+        },
+        "ACC": {
+          "name": "Accuracy / Range",
+          "weight": 0.1,
+          "score": 100.0,
+          "weighted_score": 10.0,
+          "rules_count": 2
+        },
+        "SEC": {
+          "name": "Security / Integrity",
+          "weight": 0.05,
+          "score": 100.0,
+          "weighted_score": 5.0,
+          "rules_count": 2
+        }
+      },
+      "rules_detail": [
+        {
+          "rule_id": "G05",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "encoding": "utf-8"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "XML01",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "XML05",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "html_entity_count": 1430
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G02",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "XML02",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "namespaces": [],
+            "count": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "XML03",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "XSD validation skipped — no schema provided"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G01",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G04",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "XML04",
+          "rule_tag": "specific",
+          "criteria": "CMP",
+          "total_records": 1760,
+          "passed_records": 989,
+          "pass_rate": 0.561932,
+          "details": {
+            "unique_attrs": 22,
+            "rows": 80
+          },
+          "error": null
+        },
+        {
+          "rule_id": "XML06",
+          "rule_tag": "specific",
+          "criteria": "CMP",
+          "total_records": 1760,
+          "passed_records": 989,
+          "pass_rate": 0.561932,
+          "details": {
+            "missing_attrs": {
+              "LastEditorUserId": 43,
+              "OwnerDisplayName": 73,
+              "ClosedDate": 79,
+              "FavoriteCount": 79,
+              "CommunityOwnedDate": 68,
+              "AnswerCount": 53,
+              "OwnerUserId": 7,
+              "Title": 53,
+              "Tags": 53,
+              "AcceptedAnswerId": 64,
+              "ParentId": 27,
+              "ViewCount": 53,
+              "LastEditDate": 41,
+              "LastEditorDisplayName": 78
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G03",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G07",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G08",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G14",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sha256": "5848a9e6ec7bd387c0fa3560771a2c2cb46445dea07e9da8f4416af467a9a070",
+            "size_bytes": 65648
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G15",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "size_bytes": 65648,
+            "size_mb": 0.06
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "dataset_id": "nyc_tlc",
+      "data_type": "parquet",
+      "standard": "Apache Parquet Format Spec + ISO/IEC 25012",
+      "final_score": 99.42,
+      "criteria": {
+        "SYN": {
+          "name": "Syntax Validity",
+          "weight": 0.1,
+          "score": 100.0,
+          "weighted_score": 10.0,
+          "rules_count": 1
+        },
+        "STR": {
+          "name": "Structural Conformance",
+          "weight": 0.3,
+          "score": 100.0,
+          "weighted_score": 30.0,
+          "rules_count": 3
+        },
+        "CMP": {
+          "name": "Completeness",
+          "weight": 0.25,
+          "score": 100.0,
+          "weighted_score": 25.0,
+          "rules_count": 3
+        },
+        "CST": {
+          "name": "Consistency",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 2
+        },
+        "ACC": {
+          "name": "Accuracy / Range",
+          "weight": 0.15,
+          "score": 96.1,
+          "weighted_score": 14.42,
+          "rules_count": 4
+        },
+        "SEC": {
+          "name": "Security / Integrity",
+          "weight": 0.05,
+          "score": 100.0,
+          "weighted_score": 5.0,
+          "rules_count": 3
+        }
+      },
+      "rules_detail": [
+        {
+          "rule_id": "PQ01",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "has_magic": true
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G02",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 20,
+          "passed_records": 20,
+          "pass_rate": 1.0,
+          "details": {
+            "typed_columns": 20,
+            "object_columns": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "PQ02",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "columns": [
+              "VendorID",
+              "tpep_pickup_datetime",
+              "tpep_dropoff_datetime",
+              "passenger_count",
+              "trip_distance",
+              "RatecodeID",
+              "store_and_fwd_flag",
+              "PULocationID",
+              "DOLocationID",
+              "payment_type",
+              "fare_amount",
+              "extra",
+              "mta_tax",
+              "tip_amount",
+              "tolls_amount",
+              "improvement_surcharge",
+              "total_amount",
+              "congestion_surcharge",
+              "Airport_fee",
+              "cbd_congestion_fee"
+            ],
+            "num_columns": 20,
+            "num_rows": 1000
+          },
+          "error": null
+        },
+        {
+          "rule_id": "PQ05",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 20,
+          "passed_records": 20,
+          "pass_rate": 1.0,
+          "details": {
+            "nested_columns": [],
+            "nested_count": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G01",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 20000,
+          "passed_records": 20000,
+          "pass_rate": 1.0,
+          "details": {
+            "null_count": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G04",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "row_count": 1000
+          },
+          "error": null
+        },
+        {
+          "rule_id": "PQ04",
+          "rule_tag": "specific",
+          "criteria": "CMP",
+          "total_records": 20000,
+          "passed_records": 20000,
+          "pass_rate": 1.0,
+          "details": {
+            "null_columns": {}
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G03",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 1000,
+          "passed_records": 1000,
+          "pass_rate": 1.0,
+          "details": {
+            "duplicate_rows": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "PQ03",
+          "rule_tag": "specific",
+          "criteria": "CST",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "single-file check — drift detection needs multi-file comparison"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G07",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 2000,
+          "passed_records": 2000,
+          "pass_rate": 1.0,
+          "details": {
+            "timestamp_columns": [
+              "tpep_pickup_datetime",
+              "tpep_dropoff_datetime"
+            ]
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G08",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 17000,
+          "passed_records": 17000,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "PQ06",
+          "rule_tag": "specific",
+          "criteria": "ACC",
+          "total_records": 17000,
+          "passed_records": 16956,
+          "pass_rate": 0.997412,
+          "details": {
+            "negative_columns": {
+              "fare_amount": 7,
+              "extra": 6,
+              "mta_tax": 7,
+              "improvement_surcharge": 7,
+              "total_amount": 7,
+              "congestion_surcharge": 6,
+              "cbd_congestion_fee": 4
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "PQ07",
+          "rule_tag": "specific",
+          "criteria": "ACC",
+          "total_records": 17000,
+          "passed_records": 14393,
+          "pass_rate": 0.846647,
+          "details": {
+            "zero_columns": {
+              "passenger_count": 12,
+              "trip_distance": 7,
+              "fare_amount": 1,
+              "extra": 38,
+              "mta_tax": 6,
+              "tip_amount": 226,
+              "tolls_amount": 982,
+              "improvement_surcharge": 4,
+              "total_amount": 1,
+              "congestion_surcharge": 50,
+              "Airport_fee": 978,
+              "cbd_congestion_fee": 302
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G14",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sha256": "f41ede50ef7434a6646c89cfb21528a1debd906789fecb97afb143c1828a351d",
+            "size_bytes": 33080
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G15",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "size_bytes": 33080,
+            "size_mb": 0.03
+          },
+          "error": null
+        },
+        {
+          "rule_id": "PQ08",
+          "rule_tag": "specific",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "num_row_groups": 1,
+            "num_rows": 1000,
+            "num_columns": 20
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "dataset_id": "open_targets",
+      "data_type": "parquet",
+      "standard": "Apache Parquet Format Spec + ISO/IEC 25012",
+      "final_score": 92.86,
+      "criteria": {
+        "SYN": {
+          "name": "Syntax Validity",
+          "weight": 0.1,
+          "score": 100.0,
+          "weighted_score": 10.0,
+          "rules_count": 1
+        },
+        "STR": {
+          "name": "Structural Conformance",
+          "weight": 0.3,
+          "score": 76.19,
+          "weighted_score": 22.86,
+          "rules_count": 3
+        },
+        "CMP": {
+          "name": "Completeness",
+          "weight": 0.25,
+          "score": 100.0,
+          "weighted_score": 25.0,
+          "rules_count": 3
+        },
+        "CST": {
+          "name": "Consistency",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 2
+        },
+        "ACC": {
+          "name": "Accuracy / Range",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 4
+        },
+        "SEC": {
+          "name": "Security / Integrity",
+          "weight": 0.05,
+          "score": 100.0,
+          "weighted_score": 5.0,
+          "rules_count": 3
+        }
+      },
+      "rules_detail": [
+        {
+          "rule_id": "PQ01",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "has_magic": true
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G02",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 14,
+          "passed_records": 4,
+          "pass_rate": 0.285714,
+          "details": {
+            "typed_columns": 4,
+            "object_columns": 10
+          },
+          "error": null
+        },
+        {
+          "rule_id": "PQ02",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "columns": [
+              "id",
+              "code",
+              "name",
+              "description",
+              "dbXRefs",
+              "parents",
+              "synonyms",
+              "obsoleteTerms",
+              "obsoleteXRefs",
+              "children",
+              "ancestors",
+              "therapeuticAreas",
+              "descendants",
+              "ontology"
+            ],
+            "num_columns": 14,
+            "num_rows": 100
+          },
+          "error": null
+        },
+        {
+          "rule_id": "PQ05",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 14,
+          "passed_records": 14,
+          "pass_rate": 1.0,
+          "details": {
+            "nested_columns": [
+              "dbXRefs",
+              "parents",
+              "synonyms",
+              "obsoleteTerms",
+              "obsoleteXRefs",
+              "children",
+              "ancestors",
+              "therapeuticAreas",
+              "descendants",
+              "ontology"
+            ],
+            "nested_count": 10
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G01",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 1400,
+          "passed_records": 1400,
+          "pass_rate": 1.0,
+          "details": {
+            "null_count": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G04",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "row_count": 100
+          },
+          "error": null
+        },
+        {
+          "rule_id": "PQ04",
+          "rule_tag": "specific",
+          "criteria": "CMP",
+          "total_records": 1400,
+          "passed_records": 1400,
+          "pass_rate": 1.0,
+          "details": {
+            "null_columns": {}
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G03",
+          "rule_tag": "error",
+          "criteria": "CST",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "unhashable type: 'numpy.ndarray'"
+        },
+        {
+          "rule_id": "PQ03",
+          "rule_tag": "specific",
+          "criteria": "CST",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "single-file check — drift detection needs multi-file comparison"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G07",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "no timestamp columns detected"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G08",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "no numeric columns"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "PQ06",
+          "rule_tag": "specific",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {
+            "negative_columns": {}
+          },
+          "error": null
+        },
+        {
+          "rule_id": "PQ07",
+          "rule_tag": "specific",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {
+            "zero_columns": {}
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G14",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sha256": "f59d771af58987d71624862207409ebed3d2ead3814ce5e3ba8defde07e563a8",
+            "size_bytes": 34441
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G15",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "size_bytes": 34441,
+            "size_mb": 0.03
+          },
+          "error": null
+        },
+        {
+          "rule_id": "PQ08",
+          "rule_tag": "specific",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "num_row_groups": 1,
+            "num_rows": 100,
+            "num_columns": 20
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "dataset_id": "uci_online_retail",
+      "data_type": "xlsx",
+      "standard": "ISO/IEC 29500 (OOXML) + ISO/IEC 25012",
+      "final_score": 82.48,
+      "criteria": {
+        "SYN": {
+          "name": "Syntax Validity",
+          "weight": 0.15,
+          "score": 0.0,
+          "weighted_score": 0.0,
+          "rules_count": 1
+        },
+        "STR": {
+          "name": "Structural Conformance",
+          "weight": 0.25,
+          "score": 90.62,
+          "weighted_score": 22.66,
+          "rules_count": 4
+        },
+        "CMP": {
+          "name": "Completeness",
+          "weight": 0.25,
+          "score": 99.99,
+          "weighted_score": 25.0,
+          "rules_count": 3
+        },
+        "CST": {
+          "name": "Consistency",
+          "weight": 0.15,
+          "score": 98.85,
+          "weighted_score": 14.83,
+          "rules_count": 2
+        },
+        "ACC": {
+          "name": "Accuracy / Range",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 3
+        },
+        "SEC": {
+          "name": "Security / Integrity",
+          "weight": 0.05,
+          "score": 100.0,
+          "weighted_score": 5.0,
+          "rules_count": 2
+        }
+      },
+      "rules_detail": [
+        {
+          "rule_id": "G05",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 0,
+          "pass_rate": 0.0,
+          "details": {
+            "error_position": 12
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G02",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 8,
+          "passed_records": 6,
+          "pass_rate": 0.75,
+          "details": {
+            "typed_columns": 6,
+            "object_columns": 2
+          },
+          "error": null
+        },
+        {
+          "rule_id": "XLS01",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sheets": [
+              "Sheet1"
+            ],
+            "count": 1
+          },
+          "error": null
+        },
+        {
+          "rule_id": "XLS02",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "first_row_all_string": true
+          },
+          "error": null
+        },
+        {
+          "rule_id": "XLS04",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 8,
+          "passed_records": 7,
+          "pass_rate": 0.875,
+          "details": {
+            "mixed_columns": [
+              "StockCode"
+            ]
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G01",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 8000,
+          "passed_records": 7998,
+          "pass_rate": 0.99975,
+          "details": {
+            "null_count": 2
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G04",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "row_count": 1000
+          },
+          "error": null
+        },
+        {
+          "rule_id": "XLS03",
+          "rule_tag": "specific",
+          "criteria": "CMP",
+          "total_records": 800,
+          "passed_records": 800,
+          "pass_rate": 1.0,
+          "details": {
+            "blank_cells": 0,
+            "blank_rate": 0.0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G03",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 1000,
+          "passed_records": 977,
+          "pass_rate": 0.977,
+          "details": {
+            "duplicate_rows": 23
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G09",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "no date pairs found"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G07",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 1000,
+          "passed_records": 1000,
+          "pass_rate": 1.0,
+          "details": {
+            "timestamp_columns": [
+              "InvoiceDate"
+            ]
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G08",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 2999,
+          "passed_records": 2999,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "XLS05",
+          "rule_tag": "specific",
+          "criteria": "ACC",
+          "total_records": 100,
+          "passed_records": 100,
+          "pass_rate": 1.0,
+          "details": {
+            "date_columns": [
+              "InvoiceDate"
+            ]
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G14",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sha256": "e6ecfe3ee110ea4e665539b11da8ca0c1bdcf6041082f3d30a0c6979426a3e71",
+            "size_bytes": 52747
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G15",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "size_bytes": 52747,
+            "size_mb": 0.05
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "dataset_id": "worldbank_wdi",
+      "data_type": "xlsx",
+      "standard": "ISO/IEC 29500 (OOXML) + ISO/IEC 25012",
+      "final_score": 72.89,
+      "criteria": {
+        "SYN": {
+          "name": "Syntax Validity",
+          "weight": 0.15,
+          "score": 0.0,
+          "weighted_score": 0.0,
+          "rules_count": 1
+        },
+        "STR": {
+          "name": "Structural Conformance",
+          "weight": 0.25,
+          "score": 98.21,
+          "weighted_score": 24.55,
+          "rules_count": 4
+        },
+        "CMP": {
+          "name": "Completeness",
+          "weight": 0.25,
+          "score": 53.33,
+          "weighted_score": 13.33,
+          "rules_count": 3
+        },
+        "CST": {
+          "name": "Consistency",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 2
+        },
+        "ACC": {
+          "name": "Accuracy / Range",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 3
+        },
+        "SEC": {
+          "name": "Security / Integrity",
+          "weight": 0.05,
+          "score": 100.0,
+          "weighted_score": 5.0,
+          "rules_count": 2
+        }
+      },
+      "rules_detail": [
+        {
+          "rule_id": "G05",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 0,
+          "pass_rate": 0.0,
+          "details": {
+            "error_position": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G02",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 70,
+          "passed_records": 69,
+          "pass_rate": 0.985714,
+          "details": {
+            "typed_columns": 69,
+            "object_columns": 1
+          },
+          "error": null
+        },
+        {
+          "rule_id": "XLS01",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sheets": [
+              "Data",
+              "Metadata - Countries",
+              "Metadata - Indicators"
+            ],
+            "count": 3
+          },
+          "error": null
+        },
+        {
+          "rule_id": "XLS02",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "first_row_all_string": true
+          },
+          "error": null
+        },
+        {
+          "rule_id": "XLS04",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 70,
+          "passed_records": 66,
+          "pass_rate": 0.942857,
+          "details": {
+            "mixed_columns": [
+              "Data Source",
+              "World Development Indicators",
+              "Unnamed: 2",
+              "Unnamed: 3"
+            ]
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G01",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 280,
+          "passed_records": 84,
+          "pass_rate": 0.3,
+          "details": {
+            "null_count": 196
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G04",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "row_count": 4
+          },
+          "error": null
+        },
+        {
+          "rule_id": "XLS03",
+          "rule_tag": "specific",
+          "criteria": "CMP",
+          "total_records": 280,
+          "passed_records": 84,
+          "pass_rate": 0.3,
+          "details": {
+            "blank_cells": 196,
+            "blank_rate": 0.7
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G03",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 4,
+          "passed_records": 4,
+          "pass_rate": 1.0,
+          "details": {
+            "duplicate_rows": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G09",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "no date pairs found"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G07",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "no timestamp columns detected"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G08",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 74,
+          "passed_records": 74,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "XLS05",
+          "rule_tag": "specific",
+          "criteria": "ACC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "no date columns"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G14",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sha256": "6f0e43eef04f8ae997e26853ce2da1d00a768fc337282882e969fc95a853dd21",
+            "size_bytes": 16384
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G15",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "size_bytes": 16384,
+            "size_mb": 0.02
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "dataset_id": "noaa_ghcn",
+      "data_type": "fixed_width",
+      "standard": "Domain Spec (NOAA GHCN) + ISO/IEC 25012",
+      "final_score": 100.0,
+      "criteria": {
+        "SYN": {
+          "name": "Syntax Validity",
+          "weight": 0.3,
+          "score": 100.0,
+          "weighted_score": 30.0,
+          "rules_count": 2
+        },
+        "STR": {
+          "name": "Structural Conformance",
+          "weight": 0.25,
+          "score": 100.0,
+          "weighted_score": 25.0,
+          "rules_count": 2
+        },
+        "CMP": {
+          "name": "Completeness",
+          "weight": 0.2,
+          "score": 100.0,
+          "weighted_score": 20.0,
+          "rules_count": 3
+        },
+        "CST": {
+          "name": "Consistency",
+          "weight": 0.1,
+          "score": 100.0,
+          "weighted_score": 10.0,
+          "rules_count": 1
+        },
+        "ACC": {
+          "name": "Accuracy / Range",
+          "weight": 0.1,
+          "score": 100.0,
+          "weighted_score": 10.0,
+          "rules_count": 2
+        },
+        "SEC": {
+          "name": "Security / Integrity",
+          "weight": 0.05,
+          "score": 100.0,
+          "weighted_score": 5.0,
+          "rules_count": 2
+        }
+      },
+      "rules_detail": [
+        {
+          "rule_id": "G05",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "encoding": "utf-8"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "FW01",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 200,
+          "passed_records": 200,
+          "pass_rate": 1.0,
+          "details": {
+            "mode_length": 269,
+            "distribution": {
+              "269": 200
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G10",
+          "rule_tag": "general",
+          "criteria": "STR",
+          "total_records": 200,
+          "passed_records": 200,
+          "pass_rate": 1.0,
+          "details": {
+            "delimiter": "'\\t'",
+            "mode_field_count": 1,
+            "distribution": {
+              "1": 200
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "FW02",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "offset spec required for full check"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G01",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 200,
+          "passed_records": 200,
+          "pass_rate": 1.0,
+          "details": {
+            "null_count": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G04",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "row_count": 200
+          },
+          "error": null
+        },
+        {
+          "rule_id": "FW03",
+          "rule_tag": "specific",
+          "criteria": "CMP",
+          "total_records": 200,
+          "passed_records": 200,
+          "pass_rate": 1.0,
+          "details": {
+            "sentinel_count": 2834,
+            "sentinel_value": "-9999"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G03",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 200,
+          "passed_records": 200,
+          "pass_rate": 1.0,
+          "details": {
+            "duplicate_rows": 0
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G08",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "note": "no numeric columns"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "FW04",
+          "rule_tag": "specific",
+          "criteria": "ACC",
+          "total_records": 200,
+          "passed_records": 200,
+          "pass_rate": 1.0,
+          "details": {
+            "elements": {
+              "TMAX": 52,
+              "TMIN": 52,
+              "TAVG": 52,
+              "PRCP": 44
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G14",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sha256": "7bcf2995fec6247531aa7ab2cd37e8607a62fb8afcc04ec39d9516fca18141ac",
+            "size_bytes": 54000
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G15",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "size_bytes": 54000,
+            "size_mb": 0.05
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "dataset_id": "loghub_apache",
+      "data_type": "txt_log",
+      "standard": "Syslog RFC 5424 + ISO/IEC 25012",
+      "final_score": 93.7,
+      "criteria": {
+        "SYN": {
+          "name": "Syntax Validity",
+          "weight": 0.3,
+          "score": 100.0,
+          "weighted_score": 30.0,
+          "rules_count": 3
+        },
+        "STR": {
+          "name": "Structural Conformance",
+          "weight": 0.2,
+          "score": 68.5,
+          "weighted_score": 13.7,
+          "rules_count": 2
+        },
+        "CMP": {
+          "name": "Completeness",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 2
+        },
+        "CST": {
+          "name": "Consistency",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 1
+        },
+        "ACC": {
+          "name": "Accuracy / Range",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 2
+        },
+        "SEC": {
+          "name": "Security / Integrity",
+          "weight": 0.05,
+          "score": 100.0,
+          "weighted_score": 5.0,
+          "rules_count": 2
+        }
+      },
+      "rules_detail": [
+        {
+          "rule_id": "G05",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "encoding": "utf-8"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "LOG01",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 100,
+          "passed_records": 100,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "LOG03",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 100,
+          "passed_records": 100,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "LOG02",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 100,
+          "passed_records": 100,
+          "pass_rate": 1.0,
+          "details": {
+            "levels": {
+              "notice": 30,
+              "error": 70
+            }
+          },
+          "error": null
+        },
+        {
+          "rule_id": "LOG04",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 100,
+          "passed_records": 37,
+          "pass_rate": 0.37,
+          "details": {
+            "mode_fields": 13
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G01",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G04",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G03",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G07",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G08",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G14",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sha256": "7a879a01dcf8421f61ecd0e149f708990322f4f75d4c4d365f2420a72839a27d",
+            "size_bytes": 9718
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G15",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "size_bytes": 9718,
+            "size_mb": 0.01
+          },
+          "error": null
+        }
+      ]
+    },
+    {
+      "dataset_id": "wikimedia_pageviews",
+      "data_type": "txt_log",
+      "standard": "Syslog RFC 5424 + ISO/IEC 25012",
+      "final_score": 80.0,
+      "criteria": {
+        "SYN": {
+          "name": "Syntax Validity",
+          "weight": 0.3,
+          "score": 33.33,
+          "weighted_score": 10.0,
+          "rules_count": 3
+        },
+        "STR": {
+          "name": "Structural Conformance",
+          "weight": 0.2,
+          "score": 100.0,
+          "weighted_score": 20.0,
+          "rules_count": 2
+        },
+        "CMP": {
+          "name": "Completeness",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 2
+        },
+        "CST": {
+          "name": "Consistency",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 1
+        },
+        "ACC": {
+          "name": "Accuracy / Range",
+          "weight": 0.15,
+          "score": 100.0,
+          "weighted_score": 15.0,
+          "rules_count": 2
+        },
+        "SEC": {
+          "name": "Security / Integrity",
+          "weight": 0.05,
+          "score": 100.0,
+          "weighted_score": 5.0,
+          "rules_count": 2
+        }
+      },
+      "rules_detail": [
+        {
+          "rule_id": "G05",
+          "rule_tag": "general",
+          "criteria": "SYN",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "encoding": "utf-8"
+          },
+          "error": null
+        },
+        {
+          "rule_id": "LOG01",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1000,
+          "passed_records": 0,
+          "pass_rate": 0.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "LOG03",
+          "rule_tag": "specific",
+          "criteria": "SYN",
+          "total_records": 1000,
+          "passed_records": 0,
+          "pass_rate": 0.0,
+          "details": {},
+          "error": null
+        },
+        {
+          "rule_id": "LOG02",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {
+            "levels": {}
+          },
+          "error": null
+        },
+        {
+          "rule_id": "LOG04",
+          "rule_tag": "specific",
+          "criteria": "STR",
+          "total_records": 1000,
+          "passed_records": 1000,
+          "pass_rate": 1.0,
+          "details": {
+            "mode_fields": 4
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G01",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G04",
+          "rule_tag": "general",
+          "criteria": "CMP",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G03",
+          "rule_tag": "general",
+          "criteria": "CST",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G07",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G08",
+          "rule_tag": "general",
+          "criteria": "ACC",
+          "total_records": 0,
+          "passed_records": 0,
+          "pass_rate": 1.0,
+          "details": {},
+          "error": "No DataFrame available"
+        },
+        {
+          "rule_id": "G14",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "sha256": "8d47e37ef1407b29c7d65d37e5cbe67ae6ce5903f17842965e05fc37956768e4",
+            "size_bytes": 25655
+          },
+          "error": null
+        },
+        {
+          "rule_id": "G15",
+          "rule_tag": "general",
+          "criteria": "SEC",
+          "total_records": 1,
+          "passed_records": 1,
+          "pass_rate": 1.0,
+          "details": {
+            "size_bytes": 25655,
+            "size_mb": 0.02
+          },
+          "error": null
+        }
+      ]
+    }
+  ]
+}

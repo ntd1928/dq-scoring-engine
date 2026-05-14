@@ -1,0 +1,78 @@
+rule_id,rule_tag,rule_name,criteria,description,applicable_data_types,implementation_source
+G01,general,not_null_check,CMP,Field bắt buộc không được null/empty,"csv,json,xml,parquet,avro,orc,xlsx,fixed_width,txt_log,geojson,osm,archives",Great Expectations: expect_column_values_to_not_be_null
+G02,general,type_match,STR,Giá trị khớp kiểu dữ liệu kỳ vọng,"csv,json,xml,parquet,avro,orc,xlsx,fixed_width,txt_log,geojson,osm",Great Expectations: expect_column_values_to_be_of_type
+G03,general,duplicate_check,CST,Không có record trùng lặp theo key,"csv,json,xml,parquet,avro,orc,xlsx,fixed_width,txt_log,geojson,osm",Great Expectations: expect_column_values_to_be_unique
+G04,general,row_count_range,CMP,Số dòng nằm trong khoảng kỳ vọng,"csv,json,xml,parquet,avro,orc,xlsx,fixed_width,txt_log,geojson,osm,archives",Great Expectations: expect_table_row_count_to_be_between
+G05,general,encoding_utf8,SYN,File encoding là UTF-8 hợp lệ,"csv,json,xml,txt_log,fixed_width,xlsx,geojson,osm",Custom: check_encoding_utf8()
+G06,general,bom_detection,SYN,Phát hiện và cảnh báo BOM header,"csv,json,txt_log",Custom: detect_bom()
+G07,general,timestamp_parseable,ACC,Timestamp parse được theo ISO 8601,"csv,json,xml,parquet,avro,orc,xlsx,txt_log",Custom: parse_iso8601_timestamp()
+G08,general,numeric_range,ACC,Giá trị số nằm trong domain range,"csv,json,xml,parquet,avro,orc,xlsx,fixed_width,txt_log,geojson",Great Expectations: expect_column_values_to_be_between
+G09,general,date_order_check,CST,start_date <= end_date,"csv,xlsx",Custom: check_date_order()
+G10,general,column_count_stable,STR,Mỗi dòng/record cùng số field,"csv,fixed_width",Custom: field_count_distribution()
+G11,general,string_length_check,ACC,Chuỗi không vượt quá max length,"json",Great Expectations: expect_column_value_lengths_to_be_between
+G12,general,whitespace_trim,SYN,Phát hiện leading/trailing whitespace bất thường,"csv,txt_log,fixed_width",Custom: detect_whitespace_anomaly()
+G13,general,enum_membership,ACC,Giá trị thuộc danh sách cho phép,csv,Great Expectations: expect_column_values_to_be_in_set
+G14,general,sha256_integrity,SEC,Hash file khớp với manifest,"csv,json,xml,parquet,avro,orc,xlsx,fixed_width,txt_log,geojson,osm,archives",Custom: verify_sha256() — existing in taxonomy_probe.py
+G15,general,file_size_range,SEC,Kích thước file trong khoảng hợp lệ,"csv,json,xml,parquet,avro,orc,xlsx,fixed_width,txt_log,geojson,osm,archives",Custom: check_file_size_range()
+CSV01,specific,delimiter_detection,SYN,Nhận diện đúng delimiter (comma/tab/semicolon/pipe),csv,Custom: detect_delimiter() — existing in taxonomy_probe.py
+CSV02,specific,header_presence,STR,Phát hiện file có/không có header row,csv,Custom: detect_header() — existing in taxonomy_probe.py
+CSV03,specific,quoted_newline,SYN,Field có newline trong quote vẫn parse đúng,csv,Custom: CSVQuotedNewlineCheck — from csv_spectrum verification
+CSV04,specific,embedded_separator,SYN,Dấu phân cách trong quote không split sai,csv,Custom: CSVEmbeddedSeparatorCheck
+CSV05,specific,comment_row_skip,STR,Dòng comment (#) không bị coi là data,csv,Custom: detect_comment_rows()
+CSV06,specific,field_count_distribution,STR,Thống kê phân bố số cột mỗi dòng,csv,Custom: field_count_distribution() — existing in taxonomy_probe.py
+CSV07,specific,non_ascii_handling,SYN,Ký tự non-ASCII decode đúng,csv,Custom: non_ascii_byte_count() — existing in taxonomy_probe.py
+JSON01,specific,json_parse_valid,SYN,File parse thành công bằng json.loads(),json,Custom: json_parse_check() — existing in taxonomy_probe.py
+JSON02,specific,trailing_comma_reject,SYN,Reject trailing comma theo RFC 8259,json,Custom: JSONTrailingCommaCheck — from JSONTestSuite verification
+JSON03,specific,nested_depth_check,STR,Depth không vượt quá threshold,json,Custom: measure_nested_depth()
+JSON04,specific,keyset_consistency,CST,Keyset ổn định qua các record,json,Custom: keyset_distribution() — existing in taxonomy_probe.py
+JSON05,specific,array_length_alignment,CST,Các array song song cùng độ dài,json,Custom: array_alignment_check() — from SEC EDGAR verification
+JSON06,specific,optional_key_rate,CMP,Tỷ lệ key optional missing,json,Custom: optional_key_rate()
+JSON07,specific,array_cardinality,STR,Thống kê min/max/avg phần tử array,json,Custom: array_cardinality_stats() — from openFDA verification
+JSON08,specific,jsonl_line_valid,SYN,Mỗi dòng JSONL là JSON hợp lệ,json,Custom: jsonl_line_parse() — existing in inspect_samples.py
+JSON09,specific,event_type_drift,CST,Phát hiện payload schema thay đổi theo event type,json,Custom: event_type_drift_check() — from GH Archive verification
+XML01,specific,wellformed_check,SYN,XML well-formed (parse không lỗi),xml,Custom: xml_parse_check() — existing in inspect_samples.py
+XML02,specific,namespace_aware,STR,Nhận diện và xử lý namespace đúng,xml,Custom: namespace_check() — from arXiv OAI verification
+XML03,specific,xsd_validate,STR,Validate theo XSD schema nếu có,xml,Custom: xsd_validation() — uses lxml
+XML04,specific,attribute_completeness,CMP,Tỷ lệ attribute bắt buộc có mặt,xml,Custom: attr_completeness() — from StackExchange verification
+XML05,specific,escaped_html_detect,SYN,Phát hiện escaped HTML trong text node,xml,Custom: escaped_html_detect() — from StackExchange verification
+XML06,specific,nullable_attr_rate,CMP,Tỷ lệ attribute nullable/missing,xml,Custom: nullable_attr_rate() — from StackExchange verification
+PQ01,specific,magic_number_check,SYN,File bắt đầu+kết thúc bằng PAR1,parquet,Custom: parquet_magic_check()
+PQ02,specific,schema_match,STR,Schema khớp contract kỳ vọng,parquet,Custom: parquet_schema_match() — uses pyarrow
+PQ03,specific,schema_drift_detect,CST,So sánh schema giữa các file/tháng,parquet,Custom: schema_drift_detect()
+PQ04,specific,null_rate_per_column,CMP,Tỷ lệ null mỗi cột,parquet,Great Expectations: expect_column_values_to_not_be_null per column
+PQ05,specific,nested_column_audit,STR,Kiểm tra list/struct/map columns,parquet,Custom: nested_column_audit() — from Open Targets verification
+PQ06,specific,negative_value_flag,ACC,Flag giá trị âm bất thường,parquet,Custom: negative_value_flag() — from NYC TLC verification
+PQ07,specific,zero_value_flag,ACC,Flag giá trị 0 bất thường,parquet,Custom: zero_value_flag() — from NYC TLC verification
+PQ08,specific,metadata_stats_check,SEC,Footer statistics min/max hợp lý,parquet,Custom: metadata_stats_check() — uses pyarrow metadata
+AVRO01,specific,container_magic,SYN,File có magic header Obj1,avro,Custom: avro_magic_check()
+AVRO02,specific,writer_schema_present,STR,Object container có writer schema,avro,Custom: writer_schema_check() — uses fastavro
+AVRO03,specific,union_field_check,STR,Union fields có default hợp lệ,avro,Custom: union_field_check()
+AVRO04,specific,logical_type_check,STR,Logical types parse đúng,avro,Custom: logical_type_check()
+ORC01,specific,orc_readable,SYN,File đọc được bằng Arrow ORC reader,orc,Custom: orc_read_check() — existing in taxonomy_probe.py
+ORC02,specific,decimal_precision,ACC,Decimal precision/scale khớp kỳ vọng,orc,Custom: decimal_precision_check()
+ORC03,specific,timestamp_tz_check,ACC,Timestamp timezone xử lý đúng,orc,Custom: timestamp_tz_check()
+ORC04,specific,stripe_integrity,SEC,Tất cả stripe đọc được không lỗi,orc,Custom: stripe_integrity_check()
+XLS01,specific,sheet_count_check,STR,Số sheet khớp kỳ vọng,xlsx,Custom: sheet_count_check() — existing in taxonomy_probe.py
+XLS02,specific,header_offset_detect,STR,Nhận diện header row đúng (skip metadata),xlsx,Custom: header_offset_detect()
+XLS03,specific,blank_cell_rate,CMP,Tỷ lệ ô trống,xlsx,Custom: blank_cell_rate() — existing in taxonomy_probe.py
+XLS04,specific,mixed_type_column,STR,Phát hiện cột có nhiều kiểu dữ liệu,xlsx,Custom: mixed_type_column() — existing in taxonomy_probe.py
+XLS05,specific,date_serial_parse,ACC,Date serial number parse thành datetime đúng,xlsx,Custom: date_serial_parse()
+FW01,specific,line_length_stable,SYN,Mọi dòng cùng độ dài ký tự,fixed_width,Custom: line_length_check() — existing in taxonomy_probe.py
+FW02,specific,offset_extraction,STR,Parse theo offset không dùng split,fixed_width,Custom: offset_extraction_check()
+FW03,specific,sentinel_detection,CMP,Nhận diện sentinel value (-9999) là missing,fixed_width,Custom: sentinel_detection() — existing in taxonomy_probe.py
+FW04,specific,element_code_valid,ACC,Element/domain code thuộc danh sách hợp lệ,fixed_width,Custom: element_code_valid()
+LOG01,specific,timestamp_extract,SYN,Parse được timestamp từ mỗi dòng log,txt_log,Custom: log_timestamp_extract() — existing in taxonomy_probe.py
+LOG02,specific,level_distribution,STR,Thống kê log level (error/warn/info),txt_log,Custom: log_level_distribution() — existing in taxonomy_probe.py
+LOG03,specific,parse_success_rate,SYN,Tỷ lệ dòng parse thành công bằng regex,txt_log,Custom: log_parse_rate() — existing in taxonomy_probe.py
+LOG04,specific,field_count_stable,STR,Số field mỗi dòng ổn định,txt_log,Custom: field_count_stable() — existing in taxonomy_probe.py
+GEO01,specific,feature_collection,STR,Root type là FeatureCollection,geojson,Custom: geojson_type_check() — existing in taxonomy_probe.py
+GEO02,specific,geometry_present,CMP,Mỗi feature có geometry,geojson,Custom: geometry_present() — existing in taxonomy_probe.py
+GEO03,specific,coordinate_range,ACC,"lat ∈ [-90,90], lon ∈ [-180,180]",geojson,Custom: coordinate_range_check()
+GEO04,specific,geometry_type_whitelist,ACC,Geometry type thuộc danh sách RFC 7946,geojson,Custom: geometry_type_whitelist()
+OSM01,specific,element_type_valid,STR,Element là node/way/relation,osm,Custom: osm_element_check() — existing in taxonomy_probe.py
+OSM02,specific,node_latlon_present,CMP,Node có lat và lon,osm,Custom: node_latlon_check() — existing in taxonomy_probe.py
+OSM03,specific,tag_completeness,CMP,Tỷ lệ element có ít nhất 1 tag,osm,Custom: tag_completeness() — existing in taxonomy_probe.py
+ARC01,specific,archive_openable,SYN,Archive giải nén không lỗi,archives,Custom: archive_open_check() — existing in taxonomy_probe.py
+ARC02,specific,path_traversal_check,SEC,Không có member path chứa ../,archives,Custom: path_traversal_check() — existing in taxonomy_probe.py
+ARC03,specific,executable_scan,SEC,Không có file .exe/.sh/.bat trong archive,archives,Custom: executable_scan() — existing in taxonomy_probe.py
+ARC04,specific,checksum_verify,SEC,Checksum MD5/SHA khớp với nguồn,archives,Custom: checksum_verify() — existing in taxonomy_probe.py
